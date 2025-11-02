@@ -1,4 +1,6 @@
-import { Schema, model, models, Document, Types } from 'mongoose';
+import type { Document, Types } from 'mongoose';
+import { model, models, Schema } from 'mongoose';
+
 import Event from './event.model';
 
 // TypeScript interface for Booking document
