@@ -1,4 +1,4 @@
-﻿import mongoose from 'mongoose';
+import mongoose from 'mongoose';
 
 // Define a typed cache object stored on the Node global. This prevents multiple
 // Mongoose connections when Next.js hot-reloads in development.
