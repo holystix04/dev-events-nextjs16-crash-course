@@ -1,0 +1,32 @@
+# -----------------------------
+# EditorConfig for Node/TypeScript projects (2025)
+# -----------------------------
+# https://editorconfig.org
+
+# Top-most EditorConfig file
+root = true
+
+# Default settings for all files
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Markdown files — preserve intentional line breaks and trailing spaces
+[*.md]
+trim_trailing_whitespace = false
+max_line_length = off
+
+# JSON, YAML, and configs — always two spaces
+[*.{json,yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# Shell scripts — LF ending and 2-space indent
+[*.{sh,bash}]
+indent_style = space
+indent_size = 2
+end_of_line = lf
