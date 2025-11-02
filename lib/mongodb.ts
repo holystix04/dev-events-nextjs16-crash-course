@@ -11,7 +11,7 @@ interface MongooseCache {
 
 declare global {
     // eslint-disable-next-line no-var
-    var mongoose: MongooseCache | undefined;
+    var mongooseCache: MongooseCache | undefined;
 }
 
 // MongoDB connection string from environment variable
@@ -24,9 +24,9 @@ if (!MONGODB_URI) {
 // Initialize global cache if it doesn't exist. In production this will be a
 // single server process, but in development Next's HMR creates multiple module
 // reloads so caching prevents creating many connections.
-let cached: MongooseCache = global.mongoose ?? {conn: null, promise: null};
-if (!global.mongoose) {
-    global.mongoose = cached;
+let cached: MongooseCache = global.mongooseCache ?? {conn: null, promise: null};
+if (!global.mongooseCache) {
+    global.mongooseCache = cached;
 }
 
 /**
